@@ -1,0 +1,23 @@
+<h3>11 Inicial de Argentina</h3>
+
+<ul class="mt-2 list-group">
+  <li *ngFor="let name of playerNames" class="list-group-item">{{ name }}</li>
+</ul>
+
+<button
+  *ngIf="playerNames.length > 0"
+  (click)="removePlayer()"
+  class="btn bg-danger text-light mt-2 mr-2"
+>
+  Expulsar jugador
+</button>
+
+<hr />
+
+<div *ngIf="expulsadoPlayer; else noexpulsados">
+  <p class="text-danger fw-bold">{{ expulsadoPlayer }}</p>
+</div>
+
+<ng-template #noexpulsados>
+  <p>No hubo expulsados</p>
+</ng-template>
