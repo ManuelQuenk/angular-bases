@@ -23,4 +23,10 @@ export class MainPageComponent {
     },
 
   ]
+
+  addNewCharacter ( character : Character ):void {
+    debugger;
+    console.log(character)
+    this.characters.push(character)
+  }
 }
