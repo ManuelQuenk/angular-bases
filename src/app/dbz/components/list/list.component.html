@@ -1,0 +1,14 @@
+<h4>Personajes</h4>
+    <ul class="list-group">
+      <li
+      *ngFor="let character of charactersList;
+      index as i;
+      last as isLast"
+      class="list-group-item list-group-item-success"
+      [ngClass]="{'list-group-item-danger': isLast,}"
+      >
+      <span class="text-primary"> {{ i + 1 }}. </span>
+      {{character.name}} -
+      <strong>Power :</strong> {{character.power}}
+    </li>
+    </ul>
