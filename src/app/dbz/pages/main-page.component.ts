@@ -25,8 +25,10 @@ export class MainPageComponent {
   ]
 
   addNewCharacter ( character : Character ):void {
-    debugger;
-    console.log(character)
     this.characters.push(character)
+  }
+
+  onDeleteCharacter ( index: number):void {
+    this.characters.splice(index, 1)
   }
 }
